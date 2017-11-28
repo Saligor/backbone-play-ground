@@ -1,0 +1,19 @@
+{
+  "name": "backbone-training-ground",
+  "version": "0.0.1",
+  "description": "Training ground for backbone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "author": "Salvatore Randazzo",
+  "license": "ISC",
+  "dependencies": {
+    "backbone": "^1.3.3",
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}

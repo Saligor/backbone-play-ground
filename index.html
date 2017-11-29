@@ -4,9 +4,27 @@
         <link rel="stylesheet" href="/static/Core/Css/app.min.css">
     </head>
     <body>
-        <div class="comp-test-component" data-view="testComponent">
-            <h1>Hello World</h1>
+
+        <div class="component-search-page" data-view="searchView" data-collection="searchView">
+            <div class="component-search-area">
+                <input name="search-text" placeholder="Artist Name">
+                <button>Search</button>
+            </div>
+            <div class="component-search-results">
+
+                <script id="searchItemView" type="text/x-handlebars-template">
+                    <img src="<%= data.artworkUrl60 %>" />
+                    <h3><%= data.collectionName %></h3>
+                    <p>some description</p>
+                    <button>Buy</button>
+                </script>
+
+            </div>
+
         </div>
+
+
+
         <script src="/static/Core/Js/master.min.js"></script>
     </body>
 </html>

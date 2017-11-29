@@ -76,3 +76,4 @@ gen.collections = gen.collections || {};
     window.loader = new Loader();
     window.loader.init();
 })(jQuery, gen);
+

@@ -4,6 +4,10 @@
  * @Author: Salvatore Randazzo
  */
 
+var gen = gen || {};
+gen.models = gen.models || {};
+gen.views = gen.views || {};
+
 (function ($, gen){
     'use strict';
 

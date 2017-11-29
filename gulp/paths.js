@@ -23,8 +23,7 @@ module.exports = paths = {
     },
     scss: {
         dataBundleSCSS: [
-            '../Areas/**/*.scss',
-            './scss/print.scss'
+            './js/components/**/*.scss'
         ]
     },
     fonts: [

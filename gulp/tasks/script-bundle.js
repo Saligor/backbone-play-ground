@@ -20,13 +20,13 @@ module.exports = function () {
             presets: [es2015],
             ignore: paths.js.dataVendorBundle
         }))
-        .pipe($.concat('daddario.min.js'))
-        .pipe(uglify({ preserveComments: 'license' },{
+        .pipe($.concat('master.min.js'))
+        .pipe(uglify({
              compress:
                 {
                      drop_debugger: false
                  }
-         } ).on(error => console.log(error)))
+         } ).on('error', error => console.log(error)))
         .pipe($.sourcemaps.write('.'))
         .pipe(gulp.dest(paths.dist + 'Js'));
 };

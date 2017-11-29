@@ -17,6 +17,8 @@ module.exports = paths = {
             //'./js/globals.js'
         ],
         dataCustomJS: [
+            './js/components/**/*.model.js',
+            './js/components/**/*.collection.js',
             './js/components/**/*.js',
             './js/main.js'
         ]

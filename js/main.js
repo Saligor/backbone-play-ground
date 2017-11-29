@@ -5,8 +5,9 @@
  */
 
 var gen = gen || {};
-gen.models = gen.models || {};
 gen.views = gen.views || {};
+gen.models = gen.models || {};
+gen.collections = gen.collections || {};
 
 (function ($, gen){
     'use strict';
@@ -45,18 +46,15 @@ gen.views = gen.views || {};
                             model: gen.models[model] !== undefined ? new gen.models[model]() : null
                         }));
                     } else {
-                        tempCollection = _.find(gen.dataLoader.collections, (dataLoaderCollection) => {
-                            return dataLoaderCollection.name === collection;
-                        });
 
-                        if (!tempCollection) {
+                        if (!gen.collections[`${collection}`]) {
                             console.error('Probably caused by not found collection with name ' + collection +
                                 ' please check that the name matches an actual package. Available packages:', gen.dataLoader.collections);
                         }
 
-                        viewsInstances.push(new XYL.views[view]({
+                        viewsInstances.push(new gen.views[view]({
                             el: $(component),
-                            collection: tempCollection.object
+                            collection: new gen.collections[`${collection}`]()
                         }));
                     }
 
@@ -77,5 +75,4 @@ gen.views = gen.views || {};
     // Starting the application
     window.loader = new Loader();
     window.loader.init();
-
 })(jQuery, gen);

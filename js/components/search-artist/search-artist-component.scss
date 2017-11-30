@@ -10,8 +10,10 @@
 
   .component-search-results {
     .component-search-item {
+      width: 100px;
       display: inline-block;
       margin: 5px;
+      vertical-align: top;
     }
   }
 

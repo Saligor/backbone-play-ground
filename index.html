@@ -14,8 +14,9 @@
 
                 <script id="searchItemView" type="text/x-handlebars-template">
                     <img src="<%= data.artworkUrl60 %>" />
-                    <h3><%= data.collectionName %></h3>
-                    <p>some description</p>
+                    <h3><%= data.artistName %></h3>
+                    <p><b><u>$<%= data.collectionPrice %></u></b></p>
+                    <p><%= data.collectionName %></p>
                     <button>Buy</button>
                 </script>
 
